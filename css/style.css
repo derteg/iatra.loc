@@ -412,7 +412,7 @@ body {
 
 
 .b-header_topline{
-	margin-bottom: 36px;
+	margin-bottom: 28px;
 	border-bottom: 1px solid #dfdfdf;
 	padding-bottom: 8px;
 }
@@ -500,6 +500,7 @@ body {
 	text-align: center;
 	font: normal 84px/94px 'Circe-ExtraLight', sans-serif;
 	margin-bottom: 106px;
+	margin-top: 80px;
 }
 .b-mainpromo_select{
 	margin-bottom: 72px;
@@ -533,7 +534,7 @@ body {
 
 /* .b-mainpromo_descr */
 .b-mainpromo_descr_row{
-	padding: 52px 0px 58px;
+	padding: 52px 0px 52px;
 	border-top: 1px solid #dfdfdf;
 }
 .b-mainpromo_descr_fl{

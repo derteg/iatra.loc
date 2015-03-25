@@ -687,3 +687,35 @@ body {
 	color: #0a50a7;
 	text-decoration: none;
 }
+
+
+.l-footer_logo{
+	height: 37px;
+	background: url(../img/logo.png);
+	background-repeat: no-repeat;
+	width: 340px;
+  	float: left;
+  	margin-top: 14px;
+}
+.b-footer_wrapper{
+	border-top: 1px solid #dfdfdf;
+	padding: 22px 0 44px;
+}
+.b-fotter_autorize{
+	width: 720px;
+	float: left;
+	padding-left: 38px;
+	padding-top: 22px;
+	font: 14px/22px 'Circe-Bold', sans-serif;
+	moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.l-fotter_autorize_lnk:first-child{
+	margin-left: 0;
+}
+.l-fotter_autorize_lnk{
+	color: #0a50a7;
+	text-decoration: none;
+	border-bottom: 1px dashed #0a50a7;
+	margin-left: 24px;
+}

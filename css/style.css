@@ -435,9 +435,11 @@ body {
 	width: 9px;
 	height: 10px;
 	float: right;
+	margin-top: 4px;
+	cursor: pointer;
 }
 .b-header{
-	padding-top: 26px;
+	padding-top: 16px;
 }
 .l-header_logo {
 	width: 115px;

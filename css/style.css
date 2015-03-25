@@ -411,6 +411,31 @@ body {
 }
 
 
+.b-header_topline{
+	margin-bottom: 36px;
+	border-bottom: 1px solid #dfdfdf;
+	padding-bottom: 8px;
+}
+.b-header_topline-text{
+	font: 14px 'Circe-Regular', sans-serif;
+	text-align: center;
+}
+.b-header_topline-text:before{
+	content: "";
+	padding-left: 10px;
+	background: url('../img/ico_07.png') no-repeat 0 3px;
+	width: 10px;
+	height: 14px;
+}
+.b-header_topline-text .l-txt{
+	margin-left: 10px;
+}
+.b-header_topline-close{
+	background: url('../img/ico_08.png') no-repeat 0 0px;
+	width: 9px;
+	height: 10px;
+	float: right;
+}
 .b-header{
 	padding-top: 26px;
 }

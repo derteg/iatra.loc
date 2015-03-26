@@ -57,6 +57,10 @@ body {
 	min-height: 100%;
 	position: relative;
 }
+a{
+	text-decoration: none;
+	color: #0a50a7;
+}
 .page-main{
 	padding-bottom: 118px;
 }
@@ -845,7 +849,7 @@ body {
 	margin-bottom: 22px;
 }
 .b-make_app-dropdown{
-	padding: 29px;
+	padding: 29px 0;
 	position: relative;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -859,16 +863,25 @@ body {
 	top: 65px;
 	right: 25px;
 }
+.b-make_app-dropdown.active:after{
+	background: url('../img/sprites_01.png') -262px -11px no-repeat;
+}
 .b-make_app-dropdown .b-mainpromo_descr-list{
 	margin: 0;
 }
 .b-make_app-dropdown .b-mainpromo_descr-item{
 	display: none;
 	margin: 0;
+	margin-top: 20px;
+	padding: 0 29px;
+	padding-top: 20px;
+	border-top: 1px solid #dfdfdf;
 }
 .b-make_app-dropdown .b-mainpromo_descr-item.current{
 	display: block;
-
+	padding-top: 0;
+	margin-top: 0;
+	border-top: 1px solid transparent;
 }
 .b-make_app-dropdown .b-person_item-pic-wrap{
 	width: 300px;

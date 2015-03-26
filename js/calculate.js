@@ -57,10 +57,17 @@ $('#children').change( function(){
 	}
 });
 
+
 $('#form').submit( function(){
+
 	validate();
 	return false;
 })
+
+$('#form_2').submit(function(){
+	console.log(formArr);
+	return formArr
+});
 
 $('input').focus(function(){
 	$(this).removeClass('error');

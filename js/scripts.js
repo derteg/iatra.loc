@@ -9,6 +9,7 @@ $("#client").selectOrDie({customClass: "client"});
 $(function(){
 	$('.height-adjustment').heightAdjustment();
 	$('.js-mainpromo_slider').mainpromoSlider();
+	$('.js-make_app-dropdown').appDropdown();
 });
 
 (function($) { 
@@ -42,4 +43,30 @@ $(function(){
 		});
 	}
 //end of closure
+})(jQuery);
+
+
+(function($){
+	$.fn.appDropdown = function(){
+		var that = this;
+
+		that.on('click', dropdown);
+
+		function dropdown(){
+			var li = $('li', that).not('.current');
+
+			if(that.hasClass('active')){
+				that.removeClass('active');
+				li.css('display', 'none');
+			} else {
+				that.addClass('active');
+				li.css('display', 'block');
+
+				li.on('click', function(){
+					that.find('li').removeClass('current').css('display', 'none');
+					$(this).addClass('current').css('display', 'block').parent('ul').prepend(this);
+				});
+			}
+		}
+	}
 })(jQuery);

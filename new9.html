@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IATRA - Лечащий врач для всей семьи</title>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/selectordie.css">
+	<link rel="stylesheet" href="css/selectordie_theme.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<div class="header">
+			<div class="logo"></div>
+		</div>
+		
+		<form id="form" action="">
+			Меня зовут <input type="text" name="client_name"> <br>
+			<select name="" id="client">
+				<option value="1">Мне</option>
+				<option value="2">Мне и детям</option>
+				<option value="3">Мне и супругу(е)</option>
+				<option value="4">Мне, супругу(е) и детям</option>
+				<option value="5">Моим детям</option>
+			</select>
+			нужен семейный врач. <br>
+			<span class="me">Я 
+			<input type="text" name="client_year"  class="date adult" maxlength="4">
+			года рождения <span class="spouse">, супруг(а) 
+			<input type="text" name="spouse_year"  class="date adult" maxlength="4">
+			года рождения</span>. <br></span>
+			<span class="children">У меня 
+			<select name="" id="children">
+				<option value="1">один</option>
+				<option value="2">двое</option>
+				<option value="3">трое</option>
+			</select>
+			<span class="change">ребенок</span>
+			<input type="text" name="children_year"  class="date" maxlength="4">
+			года рождения <span class="three_children">, <br><input type="text" name="children_year2"  class="date" maxlength="4">
+			года рождения, </span> <span class="two_children"><br>и <input type="text" name="children_year3"  class="date" maxlength="4">
+			года рождения</span>.<br></span>
+			Мой номер телефона <input type="text" name="phone" id="phone" placeholder="+7 (___) ___-____"> <br>
+			<input id="go" type="submit" value="Рассчитать">
+		</form>
+
+	</div>
+
+	<div class="tariffs">
+		<hr class="big">
+		<div class="content">
+			<h2>Ваш тарифный план</h2>
+			<p>Мы рекомендуем вам определенное количество осмотров, но вы всегда можете выбрать то, что вам нужно! <br><a href="">Почему мы рекомендуем столько?</a></p>
+			<table>
+				<thead>
+					<tr>
+						<td>Член семьи</td>
+						<td>Количество плановых <br>осмотров</td>
+						<td>Количество экстренных <br>осмотров </td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><b>Всего осмотров</b></td>
+						<td class="number total_inspection"></td>
+						<td class="number total_emergency_visits"></td>
+					</tr>
+					<tr>
+						<td><b>Всего визитов</b></td>
+						<td class="number total_visits"></td>
+						<td class="number total_emergency_visits"></td>
+					</tr>
+					<tr>
+						<td>Количество он-лайн консультаци в течении года (sms, whatsapp, e-mail) <br><small>Интрепретация результатов исследований. <br>Направления к узкопрофильным специалистам.</small></td>
+						<td class="number"><b>∞</b></td>
+						<td class="number"><b>∞</b></td>
+					</tr>
+					<tr>
+						<td><b>Итого</b></td>
+						<td><span class="number"><span class="total_price"></span></span><br><small class="price">рублей/год</small></td>
+						<td><form action="mail/mail.php" id="form_2" method=post> <input type="submit" value="Продолжить" name="submit"></td>
+					</tr>
+					<tr>
+						<td>Мы понимаем, что вы не до конца нам доверяете, но вы можете попробовать его. оплатив всего месяц</td>
+						<td><span class="number month">2000</span><br><small class="price">рублей/месяц</small></td>
+						<td><form action="mail/mail.php" method=post> <input type="submit" value="Продолжить" name="submit"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="change_visits">
+				Если вы считаете, что вам нужно другое количество посещений, <br>вы можете <a id="change_visits" href="">изменить их количество</a>.
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/selectordie.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/calculate.js"></script>
+
+</body>
+</html>

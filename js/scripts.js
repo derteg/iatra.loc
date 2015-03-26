@@ -1,5 +1,8 @@
 $("#phone").mask("+7 (999) 999-9999");
-$(".date").mask("9999");
+$(".date, .js-date").mask("9999");
+$(".js-card_num").mask("9999 9999 9999 9999", {placeholder: ""});
+$(".js-card_month").mask("99");
+$(".js-card_cvs").mask("999");
 $("#children").selectOrDie();
 $("#client").selectOrDie({customClass: "client"});
 

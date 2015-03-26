@@ -842,7 +842,7 @@ body {
 	border: 1px solid #dfdfdf;
 	width: 490px;
 	float: right;
-	margin-bottom: 26px;
+	margin-bottom: 22px;
 }
 .b-make_app-dropdown{
 	padding: 29px;
@@ -856,8 +856,8 @@ body {
 	width: 12px;
 	height: 8px;
 	position: absolute;
-	top: 60px;
-	right: 40px;
+	top: 65px;
+	right: 25px;
 }
 .b-make_app-dropdown .b-mainpromo_descr-list{
 	margin: 0;
@@ -875,7 +875,7 @@ body {
 }
 .b-make_app-price{
 	border-top: 1px solid #dfdfdf;
-	padding: 29px;
+	padding: 11px 29px 14px;
 	box-sizing: border-box;
 }
 .b-make_app-price_l{
@@ -904,7 +904,7 @@ body {
 }
 .b-make_app-attention{
 	border-top: 1px solid #dfdfdf;
-	padding: 16px;
+	padding: 14px 22px;
 	font: 15px 'Circe-Regular', sans-serif;
 }
 .b-make_app-attention .l-text{
@@ -931,12 +931,27 @@ body {
 	font: 16px/62px 'Circe-Regular', sans-serif;
 	margin-top: 0;
 }
+.b-price_app-form .l-fieldcell{
+	float: left;
+	width: 50%;
+	text-align: left;
+	min-height: 1px;
+	box-sizing: border-box;
+}
+.b-price_app-form .l-fieldcell:first-child{
+	text-align: right;
+	padding-right: 18px;
+}
 .b-price_app-form .l-fieldrow input{
 	border: 1px solid #dedede;
 	border-radius: 4px;
 	padding: 0 14px;
-	box-sizing: border-box;
 	margin-right: 0;
+	margin-bottom: 24px;
+	box-sizing: border-box;
+}
+.b-price_app-form button.btn{
+	margin-left: 10px;
 }
 .b-price_app-form input.inp_s1{
 	width: 232px;
@@ -945,4 +960,28 @@ body {
 .b-price_app-form input.inp_s2{
 	width: 109px;
 	height: 45px;
+}
+.b-price_app-form .b-quest{
+	display: inline-block;
+	margin-left: 10px;
+}
+.l-quest-ico_btn{
+	display: inline-block;
+	cursor: pointer;
+	font: 14px/28px 'Circe-Bold', sans-serif;
+	text-align: center;
+	color: #0a50a7;
+	width: 26px;
+	height: 26px;
+	border: 1px solid #dfdfdf;
+	border-radius: 14px;
+}
+.b-price_app-form .l-info_txt{
+	margin-left: 10px;
+	font: 14px/22px 'Circe-Bold', sans-serif;
+	margin-bottom: 6px;
+}
+.b-price_app-form .l-info_txt a{
+	text-decoration: none;
+	color: #0a50a7;
 }

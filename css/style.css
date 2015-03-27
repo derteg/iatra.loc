@@ -464,6 +464,20 @@ a{
 	float: right;
 	font-size: 14px;
 }
+.b-autorize_logined-cont{
+	margin-left: 64px;
+	padding-top: 3px;
+}
+.b-autorize_logined-cont .name{
+	font: 20px/22px 'Circe-Regular', sans-serif;
+	margin-bottom: 2px;
+}
+.b-autorize_logined-cont .logout{
+	font: 15px/22px 'Circe-Regular', sans-serif;
+	color: #0a50a7;
+	display: block;
+	cursor: pointer;
+}
 .btn{
 	padding: 15px 25px;
 	border-radius: 4px;

@@ -10,6 +10,7 @@ $(function(){
 	$('.height-adjustment').heightAdjustment();
 	$('.js-mainpromo_slider').mainpromoSlider();
 	$('.js-make_app-dropdown').appDropdown();
+	$('.js-autorize_lnk').loginPopup();
 });
 
 (function($) { 
@@ -70,3 +71,68 @@ $(function(){
 		}
 	}
 })(jQuery);
+
+(function($){
+	$.fn.loginPopup = function(){
+		var $lnk = this,
+			$popup = $('#login-popup');
+
+		function swiper(){
+			var cont = $('.js-swiper');
+
+			cont.on('click', '.l-swiper_text:not(.current)', function(e){
+				var that = $(this),
+					circle = $('.l-swiper_circle', cont);
+
+				$('.l-swiper_text').removeClass('current');
+				that.addClass('current');
+
+				if($('.l-swiper_text').first().hasClass('current')){
+					console.log(111);
+					circle.css({'left': '4px'}, 200);
+				} else if($('.l-swiper_text').last().hasClass('current')){
+					console.log(222);
+					circle.css({'left': '29px'}, 200);
+				}
+			});
+		}
+
+		$lnk.on('click', function(e){
+			e.preventDefault();
+
+
+			$.ajax({
+				url: $lnk.attr('href'),
+				method: 'GET',
+		        cache: false,
+		        async: true,
+		        success: function(html){
+		        	var $dialog = $(html);
+
+		        	$dialog.appendTo('body');
+
+		        	$dialog.on('click', function(e){
+		        		var targetClass = e.target.getAttribute('data-close-popup');
+
+		        		if(e.target == this || targetClass == 'true'){
+		        			destroyPopup();
+		        		}
+		        	});
+
+		        	$(document).keydown(function(e){
+		        		if(+e.which == 27){
+		        			destroyPopup();
+		        		}
+		        	});
+
+		        	function destroyPopup(){
+		        		$dialog.remove();
+		        	}
+
+		        	swiper();
+		        }
+			});
+		});
+	}
+})(jQuery);
+

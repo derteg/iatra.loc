@@ -11,6 +11,7 @@ $(function(){
 	$('.js-mainpromo_slider').mainpromoSlider();
 	$('.js-make_app-dropdown').appDropdown();
 	$('.js-autorize_lnk').loginPopup();
+	
 });
 
 (function($) { 
@@ -107,7 +108,7 @@ $(function(){
 			$.ajax({
 				url: $lnk.attr('href'),
 				method: 'GET',
-		        cache: true,
+		        cache: false,
 		        async: true,
 		        success: function(html){
 		        	var $dialog = $(html),
@@ -142,4 +143,3 @@ $(function(){
 		});
 	}
 })(jQuery);
-

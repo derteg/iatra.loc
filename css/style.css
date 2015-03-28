@@ -1080,7 +1080,13 @@ form.b-price_app-form{
 	cursor: pointer;
 	margin-top: 6px;
 }
-
+.l-popup_title{
+	font: 27px/ 30px 'Circe-Light', sans-serif;
+	color: #000;
+}
+.b-popup_content-text p{
+	font: 15px/1 Arial, sans-serif;
+}
 .l-swiper_text{
 	cursor: pointer;
 	font: 27px/ 30px 'Circe-Light', sans-serif;

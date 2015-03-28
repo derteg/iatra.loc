@@ -75,8 +75,7 @@ $(function(){
 
 (function($){
 	$.fn.loginPopup = function(){
-		var $lnk = this,
-			$popup = $('#login-popup');
+		var $lnk = this;
 
 		function swiper(){
 			var cont = $('.js-swiper');

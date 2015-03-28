@@ -64,6 +64,17 @@ a{
 .page-main{
 	padding-bottom: 118px;
 }
+.page-main.popup_open{
+	position: fixed;
+	/* background-color: rgba(0,0,0,0.5); */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.page-main.popup_open .b-footer{
+	position: static;
+}
 
 /* Clearfix */
 .clearfix, .wrapper, .wrapper-contacts {
@@ -452,6 +463,8 @@ a{
 }
 .b-header{
 	padding-top: 16px;
+	position: relative;
+	z-index: 0;
 }
 .l-header_logo {
 	width: 115px;
@@ -491,6 +504,7 @@ a{
 .btn.type_1{
 	border: 1px solid #155cb3;
 	color: #000;
+	background-color: transparent;
 	-webkit-transition: border .25s;
 	transition: border .25s;
 }
@@ -950,7 +964,7 @@ a{
 	border-radius: 18px;
 }
 
-.wrapper .b-price_app-form{
+form.b-price_app-form{
 	float: right;
 	width: 492px;
 	text-align: right;
@@ -1016,20 +1030,23 @@ a{
 
 .b-login_popup{
 	width:100%;
-    min-height:100%;
-    background-color: rgba(0,0,0,0.5);
-    overflow:hidden;
-    position:fixed;
-    top:0px;
+	height: 100%;
+	position: fixed;
+    
+	overflow-y: auto;
+	top:0px;
+    z-index: 100;
+	background-color: rgba(0,0,0,0.5);
 }
 .b-login_popup-cont{
 	width: 508px;
-	height: 100%;
-	padding: 50px 0;
 	background-color: #fff;
 	position: absolute;
 	right: 0;
+	height: auto;
 	box-sizing: border-box;
+	-webkit-transition: height 2s;
+	transition: height 2s;
 }
 .l-popup_close{
 	background: url('../img/sprites_01.png') -282px -30px no-repeat;
@@ -1042,10 +1059,18 @@ a{
 .l-swiper_text{
 	cursor: pointer;
 	font: 27px/ 30px 'Circe-Light', sans-serif;
-}
-.l-swiper_text.current{
 	border-bottom: 1px dashed #0a50a7;
 	color: #0a50a7;
+	-webkit-transition: color .25s, border-color .25s;
+	transition: color .25s, border-color .25s;
+}
+.l-swiper_text:hover{
+	border-bottom: 1px dashed transparent;
+}
+.l-swiper_text.current{
+	font: 27px/ 30px 'Circe-Light', sans-serif;
+	color: #000;
+	border-bottom: 1px dashed transparent;
 }
 .b-swiper{
 	line-height: 30px;
@@ -1072,6 +1097,18 @@ a{
 	transition: left .25s;
 }
 .b-login_popup-row{
-	padding: 0 50px 50px;
-	border-bottom: 1px solid #dfdfdf;
+	padding: 50px;
+	border-top: 1px solid #dfdfdf;
+}
+.b-login_popup-row:first-child{
+	border-top: 1px solid transparent;	
+}
+.b-login_popup-cls{
+	font: 18px 'Circle-Regulat', sans-serif;
+}
+.b-login_popup form{
+	display: none;
+}
+.b-login_popup form.active{
+	display: block;
 }

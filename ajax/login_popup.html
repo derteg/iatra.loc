@@ -1,14 +1,106 @@
 <div id="login-popup" class="b-login_popup">
-	<div class="b-login_popup-cont">
+	<div class="b-login_popup-cont clearfix">
 		<div class="b-login_popup-row clearfix">
 			<div class="b-swiper-cont b-login_popup-swiper fl js-swiper">
-				<span class="l-swiper_text current">Вход</span>
+				<span class="l-swiper_text current" data-change="enter">Вход</span>
 				<div class="b-swiper">
 					<span class="l-swiper_circle"></span>
 				</div>
-				<span class="l-swiper_text">Регистрация</span>
+				<span class="l-swiper_text" data-change="register">Регистрация</span>
 			</div>
 			<div id="close-popup" class="l-popup_close fr" data-close-popup="true"></div>
+		</div>
+		<div class="b-login_popup-row clearfix">
+			<form action="#0" class="b-price_app-form enter active">
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_01">Ваше имя</label>
+					</div>
+					<div class="l-fieldcell">										
+						<input class="inp_s1 js-card_num" value="" name="" type="text" id="f_01">
+					</div>
+				</div>
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_02_a">Электронная почта</label>
+					</div>
+					<div class="l-fieldcell">										
+						<input class="inp_s1 js-card_month" value="" name="" type="text" id="f_02_a" placeholder="месяц">
+					</div>
+				</div>
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_03">Ваш телефон</label>
+					</div>
+					<div class="l-fieldcell">										
+						<input class="inp_s1" value="" name="" type="text" id="f_03">
+					</div>
+				</div>
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_04">Регион проживания</label>
+					</div>
+					<div class="l-fieldcell">									
+						<input class="inp_s1" value="" name="" type="text" id="f_04">
+					</div>
+				</div>
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_05">Пароль</label>
+					</div>
+					<div class="l-fieldcell">									
+						<input class="inp_s1" value="" name="" type="text" id="f_05">
+					</div>
+				</div>
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_06">Повторите пароль</label>
+					</div>
+					<div class="l-fieldcell">									
+						<input class="inp_s1" value="" name="" type="text" id="f_06">
+					</div>
+				</div>
+
+				<div class="l-fieldrow">
+					<div class="l-fieldcell"></div>
+					<div class="l-fieldcell">
+						<p class="l-info_txt">Нажимая зарегистрироваться вы соглашаетесь с <a href="#0">условиями пользовательского соглашения</a></p>
+					</div>
+				</div>
+
+				<div class="l-fieldrow">
+					<div class="l-fieldcell"></div>
+					<div class="l-fieldcell">
+						<button class="btn type_2">Зарегистрироваться</button>
+					</div>
+				</div>
+			</form>
+
+			<form action="#0" class="b-price_app-form register">
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_02_a">Электронная почта</label>
+					</div>
+					<div class="l-fieldcell">										
+						<input class="inp_s1 js-card_month" value="" name="" type="text" id="f_02_a" placeholder="месяц">
+					</div>
+				</div>
+				<div class="l-fieldrow">
+					<div class="l-fieldcell">
+						<label for="f_05">Пароль</label>
+					</div>
+					<div class="l-fieldcell">									
+						<input class="inp_s1" value="" name="" type="text" id="f_05">
+					</div>
+				</div>
+
+				<div class="l-fieldrow">
+					<div class="l-fieldcell"></div>
+					<div class="l-fieldcell">
+						<button class="btn type_1">Войти</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

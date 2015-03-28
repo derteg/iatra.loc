@@ -82,16 +82,19 @@ $(function(){
 
 			cont.on('click', '.l-swiper_text:not(.current)', function(e){
 				var that = $(this),
-					circle = $('.l-swiper_circle', cont);
+					circle = $('.l-swiper_circle', cont),
+					$data = that.attr('data-change');
 
 				$('.l-swiper_text').removeClass('current');
 				that.addClass('current');
 
+
+				$('.b-price_app-form').removeClass('active');
+				$('.b-price_app-form.' + $data).addClass('active');
+
 				if($('.l-swiper_text').first().hasClass('current')){
-					console.log(111);
 					circle.css({'left': '4px'}, 200);
 				} else if($('.l-swiper_text').last().hasClass('current')){
-					console.log(222);
 					circle.css({'left': '29px'}, 200);
 				}
 			});
@@ -107,9 +110,12 @@ $(function(){
 		        cache: false,
 		        async: true,
 		        success: function(html){
-		        	var $dialog = $(html);
+		        	var $dialog = $(html),
+		        		$page = $('.page-main');
 
 		        	$dialog.appendTo('body');
+		        	$page.addClass('popup_open');
+
 
 		        	$dialog.on('click', function(e){
 		        		var targetClass = e.target.getAttribute('data-close-popup');
@@ -127,6 +133,7 @@ $(function(){
 
 		        	function destroyPopup(){
 		        		$dialog.remove();
+		        		$page.removeClass('popup_open');
 		        	}
 
 		        	swiper();

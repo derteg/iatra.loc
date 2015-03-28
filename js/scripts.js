@@ -115,7 +115,6 @@ $(function(){
 		        		$page = $('.page-main');
 
 		        	$dialog.appendTo('body');
-		        	$page.addClass('popup_open');
 
 
 		        	$dialog.on('click', function(e){
@@ -134,7 +133,6 @@ $(function(){
 
 		        	function destroyPopup(){
 		        		$dialog.remove();
-		        		$page.removeClass('popup_open');
 		        	}
 
 		        	swiper();

@@ -1070,7 +1070,7 @@ form.b-price_app-form{
 	background-color: #fff;
 	position: absolute;
 	right: 0;
-	height: auto;
+	height: 100%;
 	box-sizing: border-box;
 	-webkit-transition: height 2s;
 	transition: height 2s;

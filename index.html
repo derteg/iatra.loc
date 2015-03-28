@@ -246,12 +246,16 @@
 			var block = $('.full-screen'),
 				childBlock = $('.full-screen_wrap', block);
 
-				$(window).on('load resize', function(){
-					var wH = $(window).height();
+				$(window).on('load resize', heightChange);
 
+				function heightChange(){
+					var wH = $(window).height();
+					
 					block.height(wH);
 					childBlock.height(wH)
-				})
+				}
+
+				heightChange();
 		}
 		fullScreenH();
 	</script>

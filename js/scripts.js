@@ -11,7 +11,7 @@ $(function(){
 	$('.js-mainpromo_slider').mainpromoSlider();
 	$('.js-make_app-dropdown').appDropdown();
 	$('.js-autorize_lnk').loginPopup();
-	
+	$('.js-header_topline').removeTopline();
 });
 
 (function($) { 
@@ -141,5 +141,18 @@ $(function(){
 		        }
 			});
 		});
+	}
+})(jQuery);
+
+
+(function($){
+	$.fn.removeTopline = function(){
+		var cont = this;
+
+		cont.on('click', '.b-header_topline-close', function(e){
+			e.stopPropagation();
+
+			cont.remove();
+		})
 	}
 })(jQuery);

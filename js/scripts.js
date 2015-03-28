@@ -103,6 +103,8 @@ $(function(){
 		$lnk.on('click', function(e){
 			e.preventDefault();
 
+			$(window).trigger('resize');
+
 
 			$.ajax({
 				url: $(this).attr('href'),
@@ -113,7 +115,7 @@ $(function(){
 		        	var $dialog = $(html),
 		        		$page = $('.page-main');
 
-		        	$dialog.appendTo('body');
+		        	$dialog.appendTo('body');		        	
 
 
 		        	$dialog.on('click', function(e){
@@ -144,12 +146,17 @@ $(function(){
 
 (function($){
 	$.fn.removeTopline = function(){
-		var cont = this;
+		var cont = this,
+			block = $('.full-screen'),
+			childBlock = $('.full-screen_wrap', block);
+
+		
 
 		cont.on('click', '.b-header_topline-close', function(e){
 			e.stopPropagation();
 
 			cont.remove();
+			heightChange();
 		})
 	}
 })(jQuery);

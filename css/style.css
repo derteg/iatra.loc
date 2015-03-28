@@ -987,6 +987,7 @@ form.b-price_app-form{
 	border-radius: 4px;
 	padding: 0 14px;
 	margin-right: 0;
+	line-height: 43px;
 	margin-bottom: 24px;
 	box-sizing: border-box;
 }
@@ -1042,6 +1043,9 @@ form.b-price_app-form{
 @-ms-keyframes popup-bg{0%{opacity: 0}100%{opacity: 1}}
 @-moz-keyframes popup-bg{0%{opacity: 0}100%{opacity: 1}}
 @-webkit-keyframes popup-bg{0%{opacity: 0}100%{opacity: 1}}
+.lt-ie9 .b-login_popup{
+	background: url('../img/bg_over.png') repeat;
+}
 .b-login_popup-cont{
 	width: 508px;
 	background-color: #fff;

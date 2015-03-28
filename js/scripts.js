@@ -108,7 +108,7 @@ $(function(){
 			$.ajax({
 				url: $lnk.attr('href'),
 				method: 'GET',
-		        cache: false,
+		        cache: true,
 		        async: true,
 		        success: function(html){
 		        	var $dialog = $(html),

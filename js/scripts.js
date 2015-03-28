@@ -105,7 +105,7 @@ $(function(){
 
 
 			$.ajax({
-				url: $lnk.attr('href'),
+				url: $(this).attr('href'),
 				method: 'GET',
 		        cache: true,
 		        async: true,

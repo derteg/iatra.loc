@@ -1062,7 +1062,6 @@ form.b-price_app-form{
 	background-color: #fff;
 	position: absolute;
 	right: 0;
-	height: 100%;
 	box-sizing: border-box;
 	-webkit-transition: height 2s;
 	transition: height 2s;
@@ -1083,9 +1082,13 @@ form.b-price_app-form{
 .l-popup_title{
 	font: 27px/ 30px 'Circe-Light', sans-serif;
 	color: #000;
+	float: left;
+	width: 390px;
 }
-.b-popup_content-text p{
-	font: 15px/1 Arial, sans-serif;
+.b-popup_content p{
+	font: 14px/24px Arial, sans-serif;
+	color: #737373;
+	margin-bottom: 10px;
 }
 .l-swiper_text{
 	cursor: pointer;
@@ -1132,7 +1135,7 @@ form.b-price_app-form{
 	border-top: 1px solid #dfdfdf;
 }
 .b-login_popup-row:first-child,
-.b-login_popup-row:last-child{
+.b-login_popup-row.no-brd{
 	border-top: 1px solid transparent;	
 }
 .b-login_popup-cls{

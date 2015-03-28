@@ -554,7 +554,6 @@ a{
 	width: 25%;
 	float: left;
 	text-align: center;
-	cursor: pointer;
 	padding: 0 20px;
   	box-sizing: border-box;
 }
@@ -1032,12 +1031,17 @@ form.b-price_app-form{
 	width:100%;
 	height: 100%;
 	position: fixed;
-    
 	overflow-y: auto;
-	top:0px;
+	top: 0;
     z-index: 100;
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.6);
+	-ms-animation: popup-bg .3s;
+	-moz-animation: popup-bg .3s;
+	-webkit-animation: popup-bg .3s;
 }
+@-ms-keyframes popup-bg{0%{opacity: 0}100%{opacity: 1}}
+@-moz-keyframes popup-bg{0%{opacity: 0}100%{opacity: 1}}
+@-webkit-keyframes popup-bg{0%{opacity: 0}100%{opacity: 1}}
 .b-login_popup-cont{
 	width: 508px;
 	background-color: #fff;
@@ -1047,7 +1051,13 @@ form.b-price_app-form{
 	box-sizing: border-box;
 	-webkit-transition: height 2s;
 	transition: height 2s;
+	-ms-animation: popup-show .4s;
+	-moz-animation: popup-show .4s;
+	-webkit-animation: popup-show .4s;
 }
+@-ms-keyframes popup-show{0%{right:-508px}100%{right:0}}
+@-moz-keyframes popup-show{0%{right:-508px}100%{right:0}}
+@-webkit-keyframes popup-show{0%{right:-508px}100%{right:0}}
 .l-popup_close{
 	background: url('../img/sprites_01.png') -282px -30px no-repeat;
 	width: 18px;

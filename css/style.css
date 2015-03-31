@@ -1100,9 +1100,9 @@ form.b-price_app-form{
 	box-sizing: border-box;
 	-webkit-transition: height 2s;
 	transition: height 2s;
-	-ms-animation: popup-show .4s;
-	-moz-animation: popup-show .4s;
-	-webkit-animation: popup-show .4s;
+	-ms-animation: popup-show .7s;
+	-moz-animation: popup-show .7s;
+	-webkit-animation: popup-show .7s;
 }
 @-ms-keyframes popup-show{0%{right:-508px}100%{right:0}}
 @-moz-keyframes popup-show{0%{right:-508px}100%{right:0}}

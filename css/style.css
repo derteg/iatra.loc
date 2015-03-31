@@ -901,11 +901,14 @@ a{
 	margin-bottom: 22px;
 }
 .b-make_app-dropdown{	
-	position: relative;
 	cursor: default;
 	box-sizing: border-box;
 }
-.b-make_app-dropdown:after{
+.b-make_app-dropdown .b-mainpromo_descr-list{
+	margin: 0;
+	position: relative;
+}
+.b-mainpromo_descr-list:after{
 	content: "";
 	background: url('../img/sprites_01.png') -262px 0 no-repeat;
 	width: 12px;
@@ -913,18 +916,17 @@ a{
 	position: absolute;
 	top: 65px;
 	right: 25px;
+	z-index: -1;
 }
-.b-make_app-dropdown.active:after{
+.b-mainpromo_descr-list.active:after{
 	background: url('../img/sprites_01.png') -262px -11px no-repeat;
-}
-.b-make_app-dropdown .b-mainpromo_descr-list{
-	margin: 0;
 }
 .b-make_app-dropdown .b-mainpromo_descr-item{
 	display: none;
 	margin: 0;
 	padding: 29px;
 	border-top: 1px solid #dfdfdf;
+	background-color: transparent;
 }
 .b-make_app-dropdown .b-mainpromo_descr-item.current{
 	display: block;

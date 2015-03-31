@@ -452,7 +452,6 @@ a{
 .b-header{
 	position: relative;
 	z-index: 1;
-	background-color: #fff;
 	-webkit-transition: padding .5s;
 	transition: padding .5s;
 }

@@ -1,17 +1,20 @@
-$("#phone").mask("+7 (999) 999-9999");
-$(".date, .js-date").mask("9999");
-$(".js-card_num").mask("9999 9999 9999 9999", {placeholder: ""});
-$(".js-card_month").mask("99");
-$(".js-card_cvs").mask("999");
-$("#children").selectOrDie();
-$("#client").selectOrDie({customClass: "client"});
 
 $(function(){
+	$("#phone").mask("+7 (999) 999-9999");
+	$(".date, .js-date").mask("9999");
+	$(".js-card_num").mask("9999 9999 9999 9999", {placeholder: ""});
+	$(".js-card_month").mask("99");
+	$(".js-card_cvs").mask("999");
+	$("#children").selectOrDie();
+	$("#client").selectOrDie({customClass: "client"});
+
+
 	$('.height-adjustment').heightAdjustment();
 	$('.js-mainpromo_slider').mainpromoSlider();
 	$('.js-make_app-dropdown').appDropdown();
 	$('.js-autorize_lnk').loginPopup();
 	$('.js-header_topline').removeTopline();
+	
 });
 
 (function($) { 
@@ -52,23 +55,22 @@ $(function(){
 	$.fn.appDropdown = function(){
 		var that = this;
 
-		that.on('click', dropdown);
+		that.on('click', 'li', dropdown);
 
-		function dropdown(e){
-			
+		function dropdown(e){			
 			var li = $('li', that).not('.current');
 
-			if(that.hasClass('active')){
-				that.removeClass('active');
-				li.css('display', 'none');
-			} else {
-				that.addClass('active');
-				li.css('display', 'block');
+			if(e.target.tagName != 'A'){
+				if(that.hasClass('active')){
+					that.removeClass('active');
+					li.css('display', 'none');
 
-				li.on('click', function(){
 					that.find('li').removeClass('current').css('display', 'none');
 					$(this).addClass('current').css('display', 'block').parent('ul').prepend(this);
-				});
+				} else {
+					that.addClass('active');
+					li.css('display', 'block');
+				}
 			}
 		}
 	}

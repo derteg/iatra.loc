@@ -908,7 +908,7 @@ a{
 	margin: 0;
 	position: relative;
 }
-.b-mainpromo_descr-list:after{
+.b-make_app-dropdown .b-mainpromo_descr-list:after{
 	content: "";
 	background: url('../img/sprites_01.png') -262px 0 no-repeat;
 	width: 12px;
@@ -918,7 +918,7 @@ a{
 	right: 25px;
 	z-index: -1;
 }
-.b-mainpromo_descr-list.active:after{
+.b-make_app-dropdown .b-mainpromo_descr-list.active:after{
 	background: url('../img/sprites_01.png') -262px -11px no-repeat;
 }
 .b-make_app-dropdown .b-mainpromo_descr-item{

@@ -65,6 +65,19 @@ a{
 	color: #0a50a7;
 }
 
+.full-screen{		
+	display: table;		
+	table-layout: fixed;		
+	width: 100%;		
+}		
+.full-screen_wrap{		
+	display: table-cell;		
+	vertical-align: middle;		
+	width: 100%;		
+	height: 100%;		
+}		
+
+
 .page-main{
 	padding-bottom: 118px;
 }
@@ -1027,6 +1040,7 @@ form.b-price_app-form{
 }
 .b-price_app-form label{
 	display: block;
+	line-height: 45px;
 }
 .b-price_app-form .l-inp_lnk{
 	font: 16px 'Circe-Regular', sans-serif;

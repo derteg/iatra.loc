@@ -104,10 +104,7 @@ $(function(){
 		}
 
 		$lnk.on('click', function(e){
-			e.preventDefault();
-
-			$(window).trigger('resize');
-
+			e.preventDefault();			
 
 			$.ajax({
 				url: $(this).attr('href'),

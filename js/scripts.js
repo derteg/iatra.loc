@@ -54,7 +54,8 @@ $(function(){
 
 		that.on('click', dropdown);
 
-		function dropdown(){
+		function dropdown(e){
+			
 			var li = $('li', that).not('.current');
 
 			if(that.hasClass('active')){
@@ -146,17 +147,12 @@ $(function(){
 
 (function($){
 	$.fn.removeTopline = function(){
-		var cont = this,
-			block = $('.full-screen'),
-			childBlock = $('.full-screen_wrap', block);
+		var cont = this;
 
-		
-
-		cont.on('click', '.b-header_topline-close', function(e){
+		cont.on('click', '.js-header_topline-close', function(e){
 			e.stopPropagation();
 
-			cont.remove();
-			heightChange();
+			cont.addClass('topline-hide');
 		})
 	}
 })(jQuery);

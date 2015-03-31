@@ -449,10 +449,30 @@ a{
 }
 
 
+.b-header{
+	position: relative;
+	z-index: 1;
+	-webkit-transition: padding .5s;
+	transition: padding .5s;
+}
+.b-header.topline-open{
+	padding-top: 58px;
+}
+.b-header.topline-hide{
+	padding-top: 0;
+}
 .b-header_topline{
-	margin-bottom: 28px;
+	margin-bottom: 10px;
 	border-bottom: 1px solid #dfdfdf;
-	padding-bottom: 8px;
+	padding: 18px 0px 8px;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	-webkit-transition: top .5s;
+	transition: top .5s;
+}
+.topline-hide .b-header_topline{
+	top: -58px;
 }
 .b-header_topline-text{
 	font: 14px 'Circe-Regular', sans-serif;
@@ -476,10 +496,9 @@ a{
 	margin-top: 4px;
 	cursor: pointer;
 }
-.b-header{
+
+.b-header .b-header_nav{
 	padding-top: 16px;
-	position: relative;
-	z-index: 1;
 }
 .l-header_logo {
 	width: 115px;
@@ -693,9 +712,20 @@ a{
 	margin-left: 30px;
 	margin-bottom: 12px;
 	min-height: 50px;
+
 }
 .b-slide-person_pic{
 	float: left;
+	opacity: 0;
+	-webkit-transform: scale(.5) translateX(-100px);
+	transform: scale(.5) translateX(-100px);
+	-webkit-transition: transform .5s, opacity .5s;
+	transition: transform .5s, opacity .5s;
+}
+.slick-active .b-slide-person_pic{
+	opacity: 1;
+	-webkit-transform: scale(1) translateX(0px);
+	transform: scale(1) translateX(0px);
 }
 .b-slide-person_cont{
 	margin-left: 70px;
@@ -709,6 +739,12 @@ a{
 .b-slide-person_text{
 	font: 14px/24px Arial, sans-serif;
 	color: #737373;
+	opacity: 0;
+	-webkit-transition: opacity .75s;
+	transition: opacity .75s;
+}
+.slick-active .b-slide-person_text{
+	opacity: 1;
 }
 .b-mainpromo_slider .slick-prev,
 .b-mainpromo_slider .slick-next{
@@ -887,8 +923,7 @@ a{
 	float: right;
 	margin-bottom: 22px;
 }
-.b-make_app-dropdown{
-	padding: 29px 0;
+.b-make_app-dropdown{	
 	position: relative;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -907,6 +942,7 @@ a{
 }
 .b-make_app-dropdown .b-mainpromo_descr-list{
 	margin: 0;
+	padding: 29px 0;
 }
 .b-make_app-dropdown .b-mainpromo_descr-item{
 	display: none;
@@ -988,6 +1024,7 @@ form.b-price_app-form{
 	width: 50%;
 	text-align: left;
 	min-height: 1px;
+	line-height: 1;
 	box-sizing: border-box;
 }
 .b-price_app-form .l-fieldcell:first-child{
@@ -1019,6 +1056,8 @@ form.b-price_app-form{
 }
 .b-price_app-form .l-inp_lnk{
 	font: 16px 'Circe-Regular', sans-serif;
+	margin: 10px 0 30px;
+	display: inline-block;
 }
 .b-price_app-form .b-quest{
 	display: inline-block;
@@ -1037,7 +1076,7 @@ form.b-price_app-form{
 }
 .b-price_app-form .l-info_txt{
 	font: 14px/22px 'Circe-Bold', sans-serif;
-	margin-bottom: 6px;
+	margin: 14px 0px 24px;
 }
 .b-price_app-form .l-info_txt a{
 	text-decoration: none;
@@ -1144,6 +1183,9 @@ form.b-price_app-form{
 .b-login_popup-row.no-brd{
 	border-top: 1px solid transparent;	
 }
+.b-login_popup-row.no-brd{
+	padding-top: 26px;
+}
 .b-login_popup-cls{
 	font: 18px 'Circle-Regulat', sans-serif;
 }
@@ -1169,7 +1211,7 @@ form.b-price_app-form{
 .b-login_social-wrap{
 	padding: 40px 0 30px;
 	border-bottom: 1px solid #dfdfdf;
-	margin-bottom: 24px;
+	margin-bottom: 16px;
 }
 .b-login_social-text{
 	font: 18px 'Circe-Bold', sans-serif;

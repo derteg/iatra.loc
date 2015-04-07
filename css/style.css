@@ -1079,6 +1079,7 @@ form.b-price_app-form{
 	position: fixed;
 	overflow-y: auto;
 	top: 0;
+	bottom: 0;
     z-index: 100;
 	background-color: rgba(0,0,0,0.6);
 	-ms-animation: popup-bg .3s;
